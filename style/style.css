@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Stengazeta-Regular_5.woff) format('woff'),
+         url(../fonts/Stengazeta-Regular_5.woff2) format('woff2');
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header__nav-title {
+    list-style: none;
+}
+
+.header__profile {
+    width: 106px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c9ef5;
+}
+
+.header__logo {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.preview {
+    margin: 39px 0px 31px 20px;
+    display: flex;
+    justify-content: space-between;
+    max-height: 676px;
+}
+
+.preview__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 66px;
+    max-height: 555px;
+}
+
+.preview__content-title {
+    max-width: 640px;
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-size: 80px;
+    color: #86C8FF;
+}
+
+.preview__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.preview__content-bottom {
+    background-color: #7c9ef5;
+    max-width: 290px;
+    max-height: 75px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px 0px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.preview__content-descr {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 490px;
+    margin: 0px;
+}
+
+.preview__image-nat {
+    height: 100%;
+    width: 100%;
+}
+
+/* -------------------------------------------------------- */
+
+.about {
+    max-height: 720px;
+    background-color: #ecf4ff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 87px;
+}
+
+.about__left, .about__right {
+    max-height: 635px;
+}
+
+.about__image-left {
+    height: 100%;
+}
+
+.about__image-right {
+    height: 100%;
+    padding-right: 20px;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 27px;
+    gap: 134px;
+}
+
+.about__content-top {
+    background-color: #86c8ff;
+    padding: 21px 42px 5px;
+    border-radius: 40px;
+}
+
+.about__content-title {
+    font-family: "Stengazeta", sans-serif;
+    font-size: 80px;
+    color: white;
+}
+
+.about__content-center {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    max-width: 495px;
+}
+
+/* ----------------------------------------------------- */
+
+.for-whom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 47px;
+}
+
+.for-whom__image {
+    height: 100%;
+}
+
+.for-whom__content {
+    max-width: 437px;
+    margin-right: 70px;
+}
+
+.for-whom__content-title {
+    font-family: "Stengazeta", sans-serif;
+    font-size: 80px;
+    color: #86C8FF;
+}
+
+.for-whom__content-center-title {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+.for-whom__content-center-text {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+}
+
+.for-whom__content-bottom {
+    margin-top: 153px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.for-whom__content-bricks {
+    background-color: #ECF4FF;
+    border-radius: 20px;
+    max-width: 100%;
+    height: 61px;
+}
+
+/* ---------------------------------------------------------- */
+
+.reviews {
+    background-color: #ECF4FF;
+    padding-bottom: 110px;
+}
+
+.reviews__title {
+    font-family: "Stengazeta", sans-serif;
+    font-size: 80px;
+    color: #86C8FF;
+}
+
+.reviews__top {
+    padding: 83px 0px 60px 20%;
+}
+
+.reviews__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.reviews__bottom-first {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.reviews__bottom-second {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.reviews__brick {
+    width: 402px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 17px 14px 45px;
+    box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.reviews__brick-title {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.reviews__brick-ring {
+    width: 75px;
+    height: 75px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.reviews__brick-name {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reviews__brick-text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ---------------------------------------------------------- */
+
+.footer {
+    height: 15rem;
+    width: 100%;
+    /* background-color: #ECF4FF; */
+    background-color: #000;
+}
