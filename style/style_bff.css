@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Stengazeta-Regular_5.woff) format('woff'),
+         url(../fonts/Stengazeta-Regular_5.woff2) format('woff2');
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-color: #ecf4ff;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------------------------------------------------------------- */
+
+.header {
+    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header__nav-title {
+    list-style: none;
+}
+
+.header__profile {
+    width: 106px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c9ef5;
+}
+
+.header__logo {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.main {
+    padding: 81px 114px 126px 120px;
+}
+
+
+.back_button {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-right: 15px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+    padding: 0 50px;
+}
+
+.info_image-firefly {
+    width: 300px;
+    height: 300px;
+}
+
+.info_description-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 76px;
+    font-family: 'Inter', sans-serif;
+}
+
+.info_description-author {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 82px;
+}
+
+.info_description-author__black {
+    color: #000;
+}
+
+.info_description-author__pink {
+    color: #7c9ef5;
+}
+
+.info_description-about-title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.info_description-about-text {
+    margin-bottom: 120px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.description_button-buy {
+    background-color: #7c9ef5;
+    padding: 15px 42px;
+    border-radius: 10px;
+    margin-right: 35px;
+}
+
+.description_button-cart {
+    background-color: #fff;
+    padding: 15px 20px;
+    border: #7c9ef5 solid 1px;
+    border-radius: 10px;
+    color: #7C9EF5;
+}

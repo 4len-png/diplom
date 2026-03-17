@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Stengazeta-Regular_5.woff) format('woff'),
+         url(../fonts/Stengazeta-Regular_5.woff2) format('woff2');
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    padding: 50px 105px 40px 85px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.header {
+    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header__nav-title {
+    list-style: none;
+}
+
+.header__profile {
+    width: 106px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c9ef5;
+}
+
+.header__logo {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.guides-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-name {
+    background-color: #ECF4FF;
+    border-radius: 20px;
+    width: 67%;
+    max-width: 870px;
+    padding: 27px 0 20px 47px;
+}
+
+.head-name_title-top {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    color: #86C8FF;
+}
+
+.head-name_title-bottom {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    color: #7C9EF5;
+}
+
+.head-search {
+    width: 33%;
+    max-width: 288px;
+    border-radius: 20PX;
+    border: solid 3px #7C9EF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 25px 40px;
+}
+
+.head-search_title {
+    font-family: 'Stengazeta', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #7C9EF5;
+}
+
+.head-search_input {
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 287px;
+    display: flex;
+    justify-content: center;
+}
+
+.head-search_input-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.guides-describtion {
+    max-width: 870px;
+}
+
+.guides-describtion_text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.guides-edu {
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    max-width: 870px;
+    padding: 25px 0 32px 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.guides-edu_text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------- */
+
+.footer {
+    height: 15rem;
+    width: 100%;
+    background-color: #86c8ff;
+}

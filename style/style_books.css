@@ -1,0 +1,152 @@
+@font-face {
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Stengazeta-Regular_5.woff) format('woff'),
+         url(../fonts/Stengazeta-Regular_5.woff2) format('woff2');
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------- */
+
+.header {
+    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header__nav-title {
+    list-style: none;
+}
+
+.header__profile {
+    width: 106px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c9ef5;
+}
+
+.header__logo {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.description_text {
+    max-width: 33%;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------- */
+
+.books {
+    position: relative;
+    height: 820px;
+}
+
+.books_bg{
+    background-color: #ECF4FF;
+    margin: 0 auto;
+
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+
+    width: 1115px;
+    height: 100%;
+    max-height: 700px;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.books_container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding-top: 55px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.books_title {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    color: #86c8ff;
+    padding-left: 85px;
+}
+
+.books-slider {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.slider_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider_item-img {
+    max-width: 250px;
+    max-height: 250px;
+    padding-bottom: 23px;
+}
+
+.slider_item-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 14px;
+}
+
+.slider_item-btn {
+    background-color: #7C9EF5;
+    padding: 10px 22px;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------- */
+
+.footer {
+    height: 200px;
+    width: 100%;
+    background-color: #86c8ff;
+}

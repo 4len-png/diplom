@@ -18,6 +18,8 @@ a {
     color: white;
 }
 
+/* ---------------------------------------------------------------- */
+
 .header {
     background-color: #86c8ff;
     display: flex;
@@ -285,9 +287,76 @@ a {
 
 /* ---------------------------------------------------------- */
 
+.team {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 75px 0;
+}
+
+.team_title {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    color: #86C8FF;
+}
+
+.team_bricks {
+    display: flex;
+    gap: 23px;
+}
+
+.team_brick-liza {
+    background-color: #86C8FF;
+    border-radius: 20px;
+    padding: 23px 29px 18px 29px;
+    box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 5px -4px 15px 0px rgba(255, 255, 255, 1);
+}
+
+.team_brick-yuri {
+    background-color: #86C8FF;
+    border-radius: 20px;
+    padding: 23px 29px 18px 29px;
+    box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 5px -4px 15px 0px rgba(255, 255, 255, 1);
+}
+
+.team_brick-kirill {
+    background-color: #86C8FF;
+    border-radius: 20px;
+    padding: 23px 29px 18px 29px;
+    box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 5px -4px 15px 0px rgba(255, 255, 255, 1);
+}
+
+.team_brick-photo {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.team_brick-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.team_brick-name {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.team_brick-text {
+    display: flex;
+    flex-direction: column;
+    gap: 155px;
+}
+
+/* ---------------------------------------------------------- */
+
 .footer {
     height: 15rem;
     width: 100%;
-    /* background-color: #ECF4FF; */
-    background-color: #000;
+    background-color: #ecf4ff;
 }

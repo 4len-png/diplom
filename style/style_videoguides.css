@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Stengazeta";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Stengazeta-Regular_5.woff) format('woff'),
+         url(../fonts/Stengazeta-Regular_5.woff2) format('woff2');
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------------------------------------------------------- */
+
+.header {
+    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header__nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header__nav-title {
+    list-style: none;
+}
+
+.header__profile {
+    width: 106px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c9ef5;
+}
+
+.header__logo {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.description_text {
+    max-width: 33%;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------- */
+
+.video {
+    padding: 0 85px;
+}
+
+.video_title {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    color: #86c8ff;
+}
+
+video {
+    padding: 35px 0;
+}
+
+/* ---------------------------------------------------------- */
+
+.footer {
+    height: 15rem;
+    width: 100%;
+    background-color: #86c8ff;
+}
