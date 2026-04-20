@@ -18,6 +18,16 @@ a {
     color: white;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* ---------------------------------------------------------------- */
 
 .header {
@@ -25,12 +35,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
 }
 
 .header__nav-list {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
 }
 
 .header__nav-link {
@@ -45,15 +60,17 @@ a {
 
 .header__profile {
     width: 106px;
-    height: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #7c9ef5;
+    flex-shrink: 0;
 }
 
 .header__logo {
     padding-left: 20px;
+    flex-shrink: 0;
 }
 
 /* ---------------------------------------------------------------- */
@@ -96,7 +113,7 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 23px 0px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 24px;
 }
@@ -140,28 +157,53 @@ a {
 .about__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 27px;
-    gap: 134px;
+    width: 700px;
 }
 
 .about__content-top {
     background-color: #86c8ff;
     padding: 21px 42px 5px;
     border-radius: 40px;
+    max-width: 373px;
 }
 
 .about__content-title {
     font-family: "Stengazeta", sans-serif;
     font-size: 80px;
+    font-weight: 400;
     color: white;
 }
+
+.about__content-subtitle {
+    max-width: 440px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 
 .about__content-center {
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 400px;
-    max-width: 495px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.about__content-left {
+    align-self: flex-start;
+    background-color: #fff;
+    max-width: 410px;
+    padding: 27px 16px;
+}
+
+.about__content-right {
+    align-self: flex-end;
+    background-color: #fff;
+    max-width: 410px;
+    padding: 27px 16px;
 }
 
 /* ----------------------------------------------------- */
@@ -210,7 +252,14 @@ a {
     background-color: #ECF4FF;
     border-radius: 20px;
     max-width: 100%;
-    height: 61px;
+    height: 30%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.for-whom__brick-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
 }
 
 /* ---------------------------------------------------------- */
@@ -291,6 +340,11 @@ a {
     display: flex;
     justify-content: center;
     padding: 100px 0 75px 0;
+    gap: 70px;
+
+    background-image: url(/images/team_head-image.png);
+    background-repeat: no-repeat;
+    background-position: 0 200px;
 }
 
 .team_title {
@@ -356,7 +410,238 @@ a {
 /* ---------------------------------------------------------- */
 
 .footer {
-    height: 15rem;
+    background-color: #7C9EF5;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 31px 90px 20px 52px;
+    gap: 70px;
+}
+
+.footer__social-title {
+    margin-bottom: 20px;
+}
+
+.footer__links {
     width: 100%;
-    background-color: #ecf4ff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__contacts-bricks {
+    display: flex;
+    gap: 60px;
+}
+
+.footer__brick-name {
+    font-weight: 700;
+}
+
+.footer__brick-prof {
+    margin-bottom: 40px;
+}
+
+.footer__nav-list {
+    list-style: none;
+    margin: 0;
+}
+
+.footer__nav-title {
+    margin-bottom: 10px;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+/* ---------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .header {
+        min-height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .header__profile {
+        min-height: 72px;
+        width: 72px;
+        border-radius: 12px;
+    }
+
+    .header__nav-link {
+        font-size: 18px;
+    }
+
+    .preview,   
+    .for-whom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview__content {
+        margin-top: 0;
+    }
+
+    .about {
+        padding: 30px 0;
+    }
+
+    .preview__content-title,
+    .about__content-title,
+    .for-whom__content-title,
+    .reviews__title,
+    .team_title {
+        font-size: clamp(42px, 8vw, 64px);
+        text-align: center;
+    }
+
+    .preview__content-descr,
+    .about__content-center,
+    .for-whom__content-center-title,
+    .for-whom__content-center-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .about__left,
+    .about__right
+    .preview__images,
+    .for-whom__left {
+        /* width: 100%; */
+        max-width: 500px;
+    }
+
+    .for-whom__content,
+    .about__content {
+        align-items: center;
+    }
+
+    .for-whom__content-bottom {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__logo {
+        padding-left: 0;
+    }
+
+    .header__nav-list {
+        gap: 14px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+
+    .preview {
+        margin: 20px 12px;
+    }
+
+    .preview__content-title,
+    .about__content-title,
+    .for-whom__content-title,
+    .reviews__title,
+    .team_title {
+        font-size: 30px;
+    }
+
+    .preview__content-bottom {
+        width: 100%;
+        max-width: none;
+        padding: 16px 10px;
+        font-size: 18px;
+    }
+
+    .preview__content-descr,
+    .about__content-center,
+    .for-whom__content-center-title,
+    .for-whom__content-center-text {
+        font-size: 17px;
+    }
+
+    .about__image-left,
+    .about__image-right {
+        max-height: 250px;
+        max-width: 150px;
+    }
+
+    .about__content-top {
+        max-height: 100px;
+        max-width: 200px;
+    }
+
+    .about__content {
+        gap: 20px;
+    }
+
+    .about__content-center {
+        max-width: 250px;
+    }
+
+    .reviews {
+        padding: 0 12px 70px;
+    }
+
+    .reviews__bottom-first,             /*отзывы в колонну */
+    .reviews__bottom-second {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* отзывы */
+
+    .reviews__brick {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .team {
+        padding: 50px 12px;
+    }
+
+    .team_bricks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team_brick-text {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 470px) {
+    .preview__content-title,
+    .about__content-title,
+    .for-whom__content-title,
+    .reviews__title,
+    .team_title {
+        font-size: 18px;
+    }
+
+    .preview__content-descr,
+    .about__content-center,
+    .for-whom__content-center-title,
+    .for-whom__content-center-text {
+        font-size: 14px;
+    }
+
+    .about__content-top {
+        max-height: 70px;
+        max-width: 200px;
+    }
 }

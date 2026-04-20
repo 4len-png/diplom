@@ -64,7 +64,8 @@ a {
 
 .guides-head {
     display: flex;
-    justify-content: space-between;
+    gap: 42px;
+    margin-bottom: 90px;
 }
 
 .head-name {
@@ -72,20 +73,16 @@ a {
     border-radius: 20px;
     width: 67%;
     max-width: 870px;
-    padding: 27px 0 20px 47px;
+    padding: 27px 0 20px 0px;
 }
 
 .head-name_title-top {
     font-family: 'Stengazeta', sans-serif;
     font-size: 80px;
     color: #86C8FF;
+    margin-left: 47px;
 }
 
-.head-name_title-bottom {
-    font-family: 'Stengazeta', sans-serif;
-    font-size: 80px;
-    color: #7C9EF5;
-}
 
 .head-search {
     width: 33%;
@@ -123,37 +120,110 @@ a {
 
 /* ---------------------------------------------------------------- */
 
-.guides-describtion {
-    max-width: 870px;
-}
 
-.guides-describtion_text {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-}
-
-.guides-edu {
-    background-color: #ECF4FF;
-    border-radius: 10px;
-    max-width: 870px;
-    padding: 25px 0 32px 27px;
+.guides__edu {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.guides-edu_text {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    margin: 0;
+.guides__title {
+    font-family: 'Stengazeta', sans-serif;
+    color: #7C9EF5;
+    font-size: 40px;
 }
+
+.guides__subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.guides__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.guides__class {
+    display: flex;
+    gap: 42px;
+}
+
+.guides__big {
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 715px;
+    padding: 27px 108px 53px 47px;
+}
+
+.guides__small {
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 320px;
+    padding: 17px 0 0 26px;
+}
+
+
 
 /* ---------------------------------------------------------------- */
 
+
 .footer {
-    height: 15rem;
+    background-color: #7C9EF5;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    height: 247px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 31px 90px 20px 52px;
+    gap: 70px;
+}
+
+.footer__social-title {
+    margin-bottom: 20px;
+}
+
+.footer__links {
     width: 100%;
-    background-color: #86c8ff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__contacts-bricks {
+    display: flex;
+    gap: 60px;
+}
+
+.footer__brick-name {
+    font-weight: 700;
+}
+
+.footer__brick-prof {
+    margin-bottom: 40px;
+}
+
+.footer__nav-list {
+    list-style: none;
+    margin: 0;
+}
+
+.footer__nav-title {
+    margin-bottom: 10px;
+}
+
+.footer__copyright {
+    text-align: center;
 }
