@@ -179,6 +179,9 @@ textarea {
 
 button,
 input { /* 1 */
+  background: none;                                     /* мой кусок кода */
+  border: none;                                         /* мой кусок кода */
+  text-decoration: none;                                /* мой кусок кода */
   overflow: visible;
 }
 
