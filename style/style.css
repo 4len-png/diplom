@@ -172,7 +172,7 @@ img {
     padding: 21px 42px 5px;
     border-radius: 40px;
     max-width: 373px;
-    margin-bottom: 31px;
+    margin: 0 auto 31px;
 }
 
 .about__content-title {
@@ -479,24 +479,20 @@ img {
 @media (max-width: 1024px) {
     .header {
         min-height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 16px;
-        padding: 12px;
+        align-items: center;
     }
 
     .header__profile {
         min-height: 72px;
         width: 72px;
-        border-radius: 12px;
     }
 
     .header__nav-link {
         font-size: 18px;
     }
 
-    .preview,   
-    .for-whom {
+    .preview {
         flex-direction: column;
         align-items: center;
     }
@@ -609,7 +605,7 @@ img {
     .reviews__bottom-first,             /*отзывы в колонну */
     .reviews__bottom-second {
         display: flex;
-        flex-direction: column;
+        
     }
 
     /* отзывы */
@@ -634,23 +630,205 @@ img {
 }
 
 @media (max-width: 470px) {
-    .preview__content-title,
-    .about__content-title,
-    .for-whom__content-title,
-    .reviews__title,
-    .team_title {
-        font-size: 18px;
+
+    .header__logo,
+    .footer__logo {
+        margin-left: 10px;
+        width: 19px;
+        height: 19px;
     }
 
-    .preview__content-descr,
-    .about__content-center,
+    .header__profile-logo {
+        width: 15px;
+        height: 17px;
+    }
+
+    .header__profile {
+        min-height: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .header__nav-link,
+    .about__content-text,
+    .for-whom__brick-text,
+    .for-whom__content-center-text,
     .for-whom__content-center-title,
-    .for-whom__content-center-text {
-        font-size: 14px;
+    .reviews__brick-text,
+    .reviews__brick-name,
+    .team_brick-title,
+    .team_brick-name {
+        font-size: 6px;
+    }
+
+/* ---------------------------------------------------------- */
+
+    .preview__content-text,
+    .preview__content {
+        max-width: 300px;
+        gap: 20px;
+    }    
+
+    .preview__content-descr,
+    .about__content-subtitle {
+        font-size: 10px;
+    }
+
+/* ---------------------------------------------------------- */
+
+    .about {
+        padding: 0;
+    }
+
+    .about__content {
+        max-width: 200px;
+        margin: 0;
+        padding: 30px 0;
     }
 
     .about__content-top {
-        max-height: 70px;
-        max-width: 200px;
+        display: flex;
+        max-width: 150px;
+    }
+
+    .about__content-title,
+    .for-whom__content-title,
+    .team_title,
+    .reviews__title {
+        font-size: 20px;
+    }
+
+    .about__image-left,
+    .about__image-right {
+        height: 150px;
+        padding: 0;
+    }
+
+    .about__content-left,
+    .about__content-right {
+        max-width: 150px;
+        padding: 20px 10px;
+    }
+
+/* ---------------------------------------------------------- */
+
+    .for-whom {
+        align-items: flex-end;
+    }   
+
+    .for-whom__left {
+        width: 157px;
+        height: 157px;
+    }
+
+    .for-whom__content {
+        max-width: 100px;
+        margin: 0 50px 12px 0;
+    }
+
+    .for-whom__content-bottom {
+        margin-top: 15px;
+    }
+
+    .for-whom__content-bricks {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+/* ---------------------------------------------------------- */
+
+    .reviews__top {
+        display: flex;
+        padding: 21px 10px;
+    }
+
+    .reviews__brick-title {
+        gap: 6px;
+    }
+
+    .reviews__brick {
+        max-width: 105px;
+        max-height: 46px;
+        padding: 6px 8px;
+        gap: 7px;
+        border-radius: 5px;
+    }
+
+    .reviews__brick-ring {
+        width: 15px;
+        height: 15px;
+    }
+
+/* ---------------------------------------------------------- */
+
+    .team {
+        background-size: 123px 119px;
+    }
+
+    .team_brick-photo {
+        width: 75px;
+        height: 75px;
+
+    }
+
+    .team_brick-kirill,
+    .team_brick-liza,
+    .team_brick-yuri {
+        padding: 10px 15px 8px;
+        box-shadow: inset 5px -4px 15px 0px rgba(255, 255, 255, 0.7);
+    }
+
+/* ---------------------------------------------------------- */
+
+    .footer {
+        padding: 7px 0;
+        gap: 15px;
+        height: 100px;
+    }
+
+    .footer__links {
+        width: 90%;
+    }
+
+    .footer__nav-list {
+        padding: 0;
+    }
+
+    .footer__nav-title,
+    .footer__brick-prof {
+        margin-bottom: 3px;
+    }
+
+    .footer__social-title {
+        margin-bottom: 7px;
+    }
+
+    .footer__contacts-bricks,
+    .footer__contacts {
+        gap: 7px;
+    }
+
+    .footer__social img{
+        width: 10px;
+        height: 10px
+    }
+
+    .footer__brick-number img {
+        width: 4px;
+        height: 6px;
+    }
+
+    .footer__nav-title, 
+    .footer__social-title,
+    .footer__contacts-title,
+    .footer__brick-name,
+    .footer__copyright-text {
+        font-size: 5px;
+    }
+
+    .footer__brick-prof,
+    .footer__brick-number {
+        font-size: 4px;
     }
 }
