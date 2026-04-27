@@ -243,3 +243,206 @@ p {
 .footer__copyright {
     text-align: center;
 }
+
+
+@media (max-width: 1024px) {
+    .header {
+        height: auto;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header__profile {
+        min-height: 72px;
+        width: 72px;
+    }
+
+    .header__nav-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header__logo {
+        padding-left: 0;
+    }
+
+    .header__nav-list {
+        gap: 14px;
+    }
+
+    .header__nav-link,
+    .description__subtitle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .header__logo,
+    .footer__logo,
+    .header__logo img,
+    .footer__logo img {
+        margin-left: 10px;
+        width: 19px;
+        height: 19px;
+    }
+
+
+
+    .header__profile-logo,
+    .header__profile-logo img {
+        width: 15px;
+        height: 17px;
+    }
+
+    .header__profile {
+        min-height: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .description__title,
+    .video__title,
+    .video__text {
+        font-size: 30px;
+    }
+
+    .description__subtitle {
+        font-size: 8px;
+    }
+
+    .header__nav-link,
+    .description__text-bold,
+    .description__comment-left p,
+    .description__comment-right p {
+        font-size: 6px;
+    }
+
+    .description__comments-left p {
+        font-size: 5px;
+    }
+
+/* ---------------------------------- description  ------------------------- */
+
+    .description {
+        height: 100%;
+        padding: 20px 0;
+        gap: 30px;
+    }
+
+    .description__circle {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+    }
+
+    .description__content {
+        width: 90%;
+    }
+
+    .description__video {
+        height: 100px;
+        align-self: center;
+    }
+
+    .description__text-bold {
+        margin-bottom: 20px;
+    }
+
+    .description__comment-left,
+    .description__comment-right {
+        padding: 8px 12px;
+    }
+
+    .description__comments-right, 
+    .description__comments-left,
+    .description__content {
+        gap: 15px;
+    }
+
+/* ---------------------------------- videobricks ------------------------- */
+
+    .video__title {
+        margin: 0 30px;
+    }
+
+    .video__bricks {
+        flex-direction: column;
+        margin: 30px;
+    }
+
+    .video__brick {
+        width: 150px;
+        height: 150px;
+    }
+
+/* ---------------------------------- footer ------------------------- */
+
+    .footer {
+        padding: 7px 0;
+        gap: 15px;
+        height: 100px;
+    }
+
+    .footer__links {
+        width: 90%;
+    }
+
+    .footer__nav-list {
+        padding: 0;
+    }
+
+    .footer__nav-title,
+    .footer__brick-prof {
+        margin-bottom: 3px;
+    }
+
+    .footer__social-title {
+        margin-bottom: 7px;
+    }
+
+    .footer__contacts-bricks,
+    .footer__contacts {
+        gap: 7px;
+    }
+
+    .footer__social img{
+        width: 10px;
+        height: 10px
+    }
+
+    .footer__brick-number img {
+        width: 4px;
+        height: 6px;
+    }
+
+    .footer__nav-title, 
+    .footer__social-title,
+    .footer__contacts-title,
+    .footer__brick-name,
+    .footer__copyright-text {
+        font-size: 5px;
+    }
+
+    .footer__brick-prof,
+    .footer__brick-number {
+        font-size: 4px;
+    }
+
+}
+
+@media (max-width: 335px) {
+    .header__nav-list {
+        gap: 6px;
+    }
+
+    .footer__logo {
+        margin: 0;
+    }
+
+    .footer {
+        gap: 10px;
+    }
+}

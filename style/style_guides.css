@@ -22,6 +22,11 @@ a {
     padding: 50px 105px 40px 85px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ---------------------------------------------------------------- */
 
 .header {
@@ -29,12 +34,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
 }
 
 .header__nav-list {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
 }
 
 .header__nav-link {
@@ -49,17 +59,18 @@ a {
 
 .header__profile {
     width: 106px;
-    height: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #7c9ef5;
+    flex-shrink: 0;
 }
 
 .header__logo {
     padding-left: 20px;
+    flex-shrink: 0;
 }
-
 /* ---------------------------------------------------------------- */
 
 .guides-head {
@@ -226,4 +237,201 @@ a {
 
 .footer__copyright {
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        min-height: auto;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header__profile {
+        min-height: 72px;
+        width: 72px;
+    }
+
+    .header__nav-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header__logo {
+        padding-left: 0;
+    }
+
+    .header__nav-list {
+        gap: 14px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .main {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 240px;
+    }
+
+    .header__logo,
+    .footer__logo {
+        margin-left: 10px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .header__profile-logo {
+        width: 15px;
+        height: 17px;
+    }
+
+    .header__profile {
+        min-height: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .head-name_title-top,
+    .head-search_title,
+    .guides__title {
+        font-size: 20px;
+    }
+
+
+    .header__nav-link,
+    .head-search_input-text,
+    .guides__text,
+    .guides__subtitle {
+        font-size: 6px;
+    }
+
+/* ----------------------------------  ------------------------- */
+
+    .guides-head {
+        flex-direction: column;
+        margin-bottom: 45px;
+        width: 100%;
+    }
+
+    .head-name {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .head-search {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .head-search_input,
+    .head-search_input-text {
+        max-width: 66%;
+        height: 30px;
+    }
+
+
+    .head-name_title-top {
+        margin: 0;
+    }
+
+/* ----------------------------------  ------------------------- */
+
+    .guides__edu {
+        justify-content: center;
+    }
+
+    .guides__class {
+        flex-direction: column;
+        gap: 15px;
+        max-width: 270px;
+    }
+
+    .guides__text,
+    .guides__title,
+    .guides__subtitle {
+        max-width: 200px;
+    }
+
+    .guides__big,
+    .guides__small {
+        width: 85%;
+        padding: 20px;
+    }
+
+/* ---------------------------------- footer ------------------------- */
+
+    .footer {
+        padding: 7px 0;
+        gap: 15px;
+        height: 100px;
+    }
+
+    .footer__links {
+        width: 90%;
+    }
+
+    .footer__nav-list {
+        padding: 0;
+    }
+
+    .footer__nav-title,
+    .footer__brick-prof {
+        margin-bottom: 3px;
+    }
+
+    .footer__social-title {
+        margin-bottom: 7px;
+    }
+
+    .footer__contacts-bricks,
+    .footer__contacts {
+        gap: 7px;
+    }
+
+    .footer__social img{
+        width: 10px;
+        height: 10px
+    }
+
+    .footer__brick-number img {
+        width: 4px;
+        height: 6px;
+    }
+
+    .footer__nav-title, 
+    .footer__social-title,
+    .footer__contacts-title,
+    .footer__brick-name,
+    .footer__copyright-text {
+        font-size: 5px;
+    }
+
+    .footer__brick-prof,
+    .footer__brick-number {
+        font-size: 4px;
+    }
+
+}
+
+@media (max-width: 335px) {
+    .header__nav-list {
+        gap: 6px;
+    }
+
+    .footer__logo {
+        margin: 0;
+    }
+
+    .footer {
+        gap: 10px;
+    }
 }
