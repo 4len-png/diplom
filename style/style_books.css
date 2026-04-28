@@ -25,7 +25,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
 }
 
 .header__nav-list {
@@ -285,4 +285,217 @@ a {
 
 .footer__copyright {
     text-align: center;
+}
+
+/* ---------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .header {
+        min-height: auto;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header__profile {
+        min-height: 72px;
+        width: 72px;
+    }
+
+    .header__nav-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header__logo {
+        padding-left: 0;
+    }
+
+    .header__nav-list {
+        gap: 14px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .header__logo,
+    .footer__logo,
+    .header__logo img,
+    .footer__logo img {
+        margin-left: 10px;
+        width: 19px;
+        height: 19px;
+    }
+
+
+    .header__profile-logo,
+    .header__profile-logo img {
+        width: 15px;
+        height: 17px;
+    }
+
+    .header__nav-list {
+        margin: 0;
+    }
+
+    .header__profile {
+        min-height: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .title__name,
+    .library__title h1,
+    .library__links h1,
+    .books_container h1 {
+        font-size: 20px;
+    }
+
+    .title__subtitle,
+    .library__title p,
+    .slider_item-title,
+    .slider_item-btn {
+        font-size: 10px;
+    }
+
+    .header__nav-link {
+        font-size: 6px;
+    }
+
+/* ---------------------------------- title ------------------------- */
+
+    .title__container {
+        gap: 15px;
+        margin: 40px 0;
+    }
+
+    .title__image {
+        max-width: 205px;
+
+    }
+
+/* ---------------------------------- library ------------------------- */
+
+.library__container {
+    gap: 40px;
+    }
+    
+    .library__content img {
+        max-width: 175px;
+        max-height: 150px;
+    }
+    
+    .library__links {
+        margin-top: 0;
+        gap: 15px;   
+    }
+    
+    .library__btn {
+        margin: 0 auto;
+        height: 34px;
+        width: 80%;
+        padding: 0 20px;
+    }
+    
+    .btn__line {
+        width: 1px;
+    }
+    
+/* ---------------------------------- slider ------------------------- */
+
+    .books {
+        margin: 30px 0;
+        height: auto;
+    }
+
+    .books_bg {
+        max-height: none;
+        max-width: 350px;
+        box-shadow: inset 0px 0px 5px 10px rgba(255, 255, 255, 1);
+        padding-bottom: 30px;
+    }
+
+    .books_container {
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    .books-slider {
+        flex-direction: column;
+        gap: 37px;
+    }
+
+    .slider_item-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .slider_item-btn {
+        max-width: 100px;
+        padding: 7px 15px;
+    }
+
+    .slider_item-btn:hover {
+        box-shadow: inset 0px 0px 5px 2px rgba(255, 255, 255, 0.2);
+    }
+
+/* ---------------------------------- footer ------------------------- */
+
+    .footer {
+        padding: 7px 0;
+        gap: 15px;
+        height: 100px;
+    }
+
+    .footer__links,
+    .library__title {
+        width: 90%;
+    }
+
+    .footer__nav-list {
+        padding: 0;
+    }
+
+    .footer__nav-title,
+    .footer__brick-prof {
+        margin-bottom: 3px;
+    }
+
+    .footer__social-title {
+        margin-bottom: 7px;
+    }
+
+    .footer__contacts-bricks,
+    .footer__contacts {
+        gap: 7px;
+    }
+
+    .footer__social img{
+        width: 10px;
+        height: 10px
+    }
+
+    .footer__brick-number img {
+        width: 4px;
+        height: 6px;
+    }
+
+    .footer__nav-title, 
+    .footer__social-title,
+    .footer__contacts-title,
+    .footer__brick-name,
+    .footer__copyright-text,
+    .library__btn a {                   /* шрифт кнопок библиотеки */
+        font-size: 5px;
+    }
+
+    .footer__brick-prof,
+    .footer__brick-number {
+        font-size: 4px;
+    }
 }
