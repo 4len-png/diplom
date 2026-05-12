@@ -82,7 +82,9 @@ a {
     max-height: 225px;
 }
 
+
 /* ---------------------------------------------------------------- */
+
 
 .library {
     background-color: #ECF4FF;
@@ -155,7 +157,89 @@ a {
     background: white;
 }
 
+/* ---------------------------------- first ------------------------- */
+
+.first {
+    height: 900px;
+    padding: 163px 106px 40px 87px;
+}
+
+.first__wrapper {
+    display: flex;
+    gap: 130px;
+    justify-content: center;
+}
+
+.first__contWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 144px;
+    max-width: 517px;
+}
+
+.first__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.first__block {
+    width: 387px;
+}
+
+.first__brick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 61px;
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: solid 1px #86C8FF;
+}
+
+.first__bg {
+    background-color: #ECF4FF;
+
+    transform: translateY(+105%);
+    width: 517px;
+    height: 300px;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.first__title-big,
+.first__title-small {
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #86c8ff;
+}
+
+.first__title-small {
+    font-size: 48px;
+}
+
+.first__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+
+.first__illustration {
+    background-color: #d9d9d9;
+    height: 800px;
+    width: 600px;
+}
+
+
 /* ---------------------------------------------------------------- */
+
+
 
 .books {
     position: relative;
@@ -378,6 +462,7 @@ a {
         max-width: 205px;
 
     }
+
 
 /* ---------------------------------- library ------------------------- */
 
