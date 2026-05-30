@@ -27,6 +27,10 @@ img {
     height: auto;
 }
 
+.main {
+    background-color: #fff;
+}
+
 /* ---------------------------------------------------------------- */
 
 .header {
@@ -78,7 +82,10 @@ img {
 .woman__title {
     font-family: 'Stengazeta', sans-serif;
     font-size: 54px;
+    font-weight: 400;
+    line-height: 1;
     color: #86c8ff;
+    text-transform: uppercase;
 }
 
 .start__title {
@@ -93,56 +100,320 @@ img {
 }
 
 .start__subtitle {
+    max-width: 533px;
+    margin-left: 112px;
     font-size: 24px;
-    margin-left: 115px;
+    line-height: normal;
+    color: #2a1f4a;
 }
 
 .start__title span {
-    margin-left: 80px;
+    display: block;
+    margin-left: 79px;
 }
 
 .start {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 11px 0 91px;
+    position: relative;
+    min-height: 820px;
 }
 
 .start__text {
-    align-self: center;
+    position: absolute;
+    z-index: 1;
+    top: 145px;
+    left: clamp(90px, 9vw, 172px);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.start__image {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    max-width: 886px;
+    aspect-ratio: 1 / 1;
+}
+
+.start__image img {
+    width: min(50vw, 1050px);
+    max-width: none;
+    min-width: 0;
 }
 
 /* ---------------------------------------------------------- */
 
 .woman {
-    display: flex;
+    position: relative;
     background-color: #ecf4ff;
-    gap: 70px;
-    padding-bottom: 105px;
+    min-height: 760px;
+}
+
+.woman__image {
+    position: absolute;
+    line-height: 0;
+}
+
+.woman__image img {
+    width: min(28vw, 510px);
+    max-width: none;
+    min-width: 0;
 }
 
 .woman__content {
-    max-width: 500px;
-    align-self: center;
+    position: absolute;
+    left: 51%;
+    top: 300px;
+    max-width: 560px;
+}
+
+.woman__title {
+    margin-bottom: 22px;
+}
+
+.woman__text,
+.kids__text {
+    line-height: normal;
+    color: #2a1f4a;
 }
 
 /* ---------------------------------------------------------- */
 
 .kids {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 120px 20px 180px;
+    position: relative;
+    min-height: 760px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.kids__image-left,
+.kids__image-right {
+    position: absolute;
+    line-height: 0;
+}
+
+.kids__image-left {
+    left: clamp(60px, 8vw, 150px);
+    top: 150px;
+    width: min(22vw, 360px);
+}
+
+.kids__image-right {
+    right: clamp(70px, 9vw, 170px);
+    top: 225px;
+    width: min(25vw, 430px);
 }
 
 .kids__content {
-    height: max-content;
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    width: 520px;
+    min-height: 395px;
     background-color: #ecf4ff;
     border-radius: 10px;
-    padding: 40px 50px;
+    padding: 44px 56px;
+    transform: translateX(-50%);
 }
 
 .kids__text {
-    max-width: 365px;
+    max-width: 408px;
+}
+
+.author-story {
+    color: #2a1f4a;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.author-story_teacher,
+.author-story_methodist,
+.author-story_volunteer {
+    background-color: #ecf4ff;
+}
+
+.author-story__inner {
+    width: min(100%, 1920px);
+    min-height: 720px;
+    margin: 0 auto;
+    padding: 90px clamp(70px, 8vw, 150px);
+}
+
+.author-story__inner_two,
+.author-story__inner_methodist,
+.author-story__inner_patient,
+.author-story__inner_volunteer,
+.author-story__inner_wife {
+    display: grid;
+    align-items: center;
+    gap: clamp(48px, 7vw, 120px);
+}
+
+.author-story__inner_two {
+    grid-template-columns: minmax(340px, 520px) minmax(300px, 420px);
+    justify-content: center;
+}
+
+.author-story__text {
+    max-width: 520px;
+}
+
+.author-story__text p + p,
+.author-note p + p,
+.author-book p + p {
+    margin-top: 22px;
+}
+
+.author-story__text span,
+.author-quote strong {
+    display: inline-block;
+    font-family: 'Stengazeta', sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1;
+    color: #86c8ff;
+    text-transform: uppercase;
+}
+
+.author-story__inner_teacher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 58px;
+}
+
+.author-story__photos_teacher {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(36px, 5vw, 90px);
+}
+
+.author-story__text_teacher {
+    display: grid;
+    grid-template-columns: minmax(280px, 450px) minmax(280px, 500px);
+    align-items: start;
+    gap: clamp(40px, 8vw, 130px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.author-polaroid {
+    width: min(24vw, 360px);
+    margin: 0;
+    padding: 22px 22px 54px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 18px 36px rgba(42, 31, 74, 0.12);
+    transform: rotate(-3deg);
+}
+
+.author-polaroid_small {
+    width: min(20vw, 290px);
+    transform: rotate(5deg);
+}
+
+.author-polaroid_tilt-right {
+    transform: rotate(4deg);
+}
+
+.author-polaroid_blue {
+    background-color: #ecf4ff;
+}
+
+.author-polaroid img,
+.author-photo-large img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 5px;
+}
+
+.author-polaroid figcaption {
+    margin-top: 18px;
+    color: #2a1f4a;
+    font-size: 18px;
+    text-align: center;
+}
+
+.author-story__inner_methodist {
+    grid-template-columns: minmax(320px, 520px) minmax(280px, 420px) minmax(320px, 600px);
+}
+
+.author-book {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding: 56px 48px;
+    background-color: #fff;
+    border: 3px solid #86c8ff;
+    border-radius: 0 0 45% 45% / 0 0 10% 10%;
+}
+
+.author-methodist__image {
+    width: 100%;
+    max-height: 620px;
+    object-fit: contain;
+}
+
+.author-story__inner_patient {
+    grid-template-columns: minmax(300px, 470px) minmax(360px, 720px);
+    justify-content: center;
+}
+
+.author-photo-large {
+    margin: 0;
+}
+
+.author-photo-large img {
+    aspect-ratio: 377 / 550;
+}
+
+.author-story__text_patient {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 32px 52px;
+    max-width: 760px;
+}
+
+.author-story__text_patient p:first-child {
+    grid-column: 1 / -1;
+}
+
+.author-story__inner_volunteer {
+    grid-template-columns: minmax(300px, 420px) minmax(300px, 420px) minmax(360px, 560px);
+}
+
+.author-note,
+.author-quote {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 34px 28px;
+}
+
+.author-quote {
+    transform: rotate(-8deg);
+}
+
+.author-quote p {
+    margin-bottom: 10px;
+}
+
+.author-quote strong + p {
+    margin-top: 28px;
+}
+
+.author-story__inner_wife {
+    grid-template-columns: minmax(260px, 360px) minmax(260px, 360px) minmax(360px, 620px);
+    justify-content: center;
+}
+
+.author-story__text_wife {
+    max-width: 620px;
 }
 
 
@@ -202,4 +473,536 @@ img {
 
 .footer__copyright {
     text-align: center;
+}
+
+@media (max-width: 1180px) {
+    .header {
+        gap: 16px;
+        min-height: auto;
+    }
+
+    .header__nav-link {
+        font-size: 18px;
+    }
+
+    .header__profile {
+        width: 72px;
+        min-height: 72px;
+    }
+
+    .start {
+        min-height: 620px;
+    }
+
+    .start__text {
+        top: 120px;
+        left: 48px;
+    }
+
+    .start__title {
+        font-size: 64px;
+    }
+
+    .start__subtitle {
+        max-width: 470px;
+        margin-left: 72px;
+        font-size: 20px;
+    }
+
+    .start__image img {
+        max-width: 680px;
+    }
+
+
+    .woman {
+        min-height: 640px;
+    }
+
+    .woman__image img {
+        width: 360px;
+    }
+
+    .woman__image {
+        left: 40px;
+        top: 190px;
+    }
+
+    .woman__content {
+        left: calc(40% + 12px);
+        top: 245px;
+        max-width: 460px;
+    }
+
+    .kids {
+        min-height: 620px;
+    }
+
+    .kids__image-left {
+        left: 20px;
+        width: 240px;
+    }
+
+    .kids__image-right {
+        right: 20px;
+        width: 280px;
+    }
+
+    .kids__content {
+        left: calc(20% + 110px);
+        width: 420px;
+        min-height: 360px;
+        padding: 32px 38px;
+    }
+
+    .author-story__inner {
+        min-height: 620px;
+        padding-inline: 48px;
+    }
+
+    .author-story__inner_methodist,
+    .author-story__inner_patient,
+    .author-story__inner_volunteer,
+    .author-story__inner_wife {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .author-story__inner_methodist {
+        grid-template-columns: 1fr;
+    }
+
+    .author-methodist__image {
+        max-height: 420px;
+    }
+
+    .author-story__inner_volunteer {
+        grid-template-columns: 1fr;
+    }
+
+    .author-story__inner_wife {
+        grid-template-columns: minmax(220px, 320px) minmax(220px, 320px);
+    }
+
+    .author-story__text_wife {
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .footer {
+        height: auto;
+        padding: 28px 36px 20px;
+    }
+
+    .footer__links {
+        gap: 24px;
+    }
+
+    .footer__contacts-bricks {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 820px) {
+    .header {
+        padding: 8px 0;
+    }
+
+    .header__logo {
+        padding-left: 12px;
+    }
+
+    .header__nav-list {
+        gap: 18px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+
+    .start {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        min-height: auto;
+        overflow: visible;
+        padding: 46px 24px 0;
+        text-align: center;
+    }
+
+    .start__text,
+    .start__image {
+        position: static;
+    }
+
+    .start__title {
+        font-size: 56px;
+    }
+
+    .start__subtitle,
+    .start__title span {
+        margin-left: 0;
+    }
+
+    .start__subtitle {
+        margin-inline: auto;
+    }
+
+    .start__image {
+        justify-self: center;
+    }
+
+    .start__image img {
+        width: min(86vw, 520px);
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .woman {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        min-height: auto;
+        overflow: visible;
+        padding: 42px 24px 70px;
+        text-align: center;
+    }
+
+    .woman__image,
+    .woman__content {
+        position: static;
+    }
+
+    .woman__image img {
+        width: min(74vw, 390px);
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .woman__content {
+        max-width: 520px;
+    }
+
+    .kids {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 70px 24px 90px;
+        text-align: center;
+    }
+
+    .kids__image-left,
+    .kids__image-right,
+    .kids__content {
+        position: static;
+    }
+
+    .kids__image-left {
+        width: min(58vw, 250px);
+    }
+
+    .kids__image-right {
+        width: min(68vw, 300px);
+    }
+
+    .kids__content {
+        order: -1;
+        width: 100%;
+        min-height: auto;
+        max-width: 520px;
+    }
+
+    .kids__text {
+        max-width: none;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+    }
+
+    .author-story {
+        font-size: 17px;
+    }
+
+    .author-story__inner,
+    .author-story__inner_two,
+    .author-story__inner_methodist,
+    .author-story__inner_patient,
+    .author-story__inner_volunteer,
+    .author-story__inner_wife {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        padding: 64px 24px;
+    }
+
+    .author-story__photos_teacher,
+    .author-story__text_teacher {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author-story__text_teacher,
+    .author-story__text,
+    .author-book,
+    .author-note,
+    .author-quote {
+        max-width: 560px;
+    }
+
+    .author-polaroid,
+    .author-polaroid_small {
+        width: min(78vw, 340px);
+    }
+
+    .author-story__inner_methodist {
+        gap: 36px;
+    }
+
+    .author-book,
+    .author-story__text_patient {
+        display: block;
+    }
+
+    .author-book {
+        padding: 32px 26px;
+    }
+
+    .author-photo-large {
+        width: min(78vw, 360px);
+    }
+
+    .author-quote {
+        transform: rotate(-4deg);
+    }
+
+    .author-story__text span,
+    .author-quote strong {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 470px) {
+    .header__logo,
+    .header__logo img {
+        width: 19px;
+        height: 19px;
+        padding-left: 0;
+        margin-left: 10px;
+    }
+
+    .header__profile {
+        width: 35px;
+        min-height: 35px;
+        height: 35px;
+    }
+
+    .header__profile-logo,
+    .header__profile-logo img {
+        width: 15px;
+        height: 17px;
+    }
+
+    .header__nav-list {
+        gap: 10px;
+    }
+
+    .header__nav-link {
+        font-size: 6px;
+    }
+
+    .start {
+        gap: 20px;
+        padding: 34px 18px 0;
+    }
+
+    .start__title {
+        font-size: 42px;
+    }
+
+    .woman__title {
+        font-size: 34px;
+    }
+
+    .start__subtitle,
+    .woman__text,
+    .kids__text {
+        font-size: 11px;
+    }
+
+    .start__image img {
+        width: min(100%, 300px);
+    }
+
+    .woman {
+        padding: 32px 20px 48px;
+    }
+
+    .woman__image img {
+        width: min(100%, 230px);
+    }
+
+    .woman__title {
+        margin-bottom: 16px;
+    }
+
+    .kids {
+        gap: 28px;
+        padding: 48px 20px 70px;
+    }
+
+    .kids__content {
+        padding: 22px 18px;
+    }
+
+    .kids__image-left {
+        width: 160px;
+    }
+
+    .kids__image-right {
+        width: 190px;
+    }
+
+    .footer {
+        gap: 15px;
+        min-height: 100px;
+        padding: 7px 0;
+    }
+
+    .footer__links {
+        width: 90%;
+    }
+
+    .footer__logo,
+    .footer__logo img {
+        width: 19px;
+        height: 19px;
+    }
+
+    .footer__nav-list {
+        padding: 0;
+    }
+
+    .footer__nav-title,
+    .footer__brick-prof {
+        margin-bottom: 3px;
+    }
+
+    .footer__social-title {
+        margin-bottom: 7px;
+    }
+
+    .footer__contacts,
+    .footer__contacts-bricks {
+        gap: 7px;
+    }
+
+    .footer__social img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .footer__brick-number img {
+        width: 4px;
+        height: 6px;
+    }
+
+    .footer__nav-title,
+    .footer__social-title,
+    .footer__contacts-title,
+    .footer__brick-name,
+    .footer__copyright-text {
+        font-size: 5px;
+    }
+
+    .footer__brick-prof,
+    .footer__brick-number {
+        font-size: 4px;
+    }
+
+    .author-story {
+        font-size: 11px;
+    }
+
+    .author-story__inner,
+    .author-story__inner_two,
+    .author-story__inner_methodist,
+    .author-story__inner_patient,
+    .author-story__inner_volunteer,
+    .author-story__inner_wife {
+        padding: 44px 20px;
+        gap: 28px;
+    }
+
+    .author-story__text span,
+    .author-quote strong {
+        font-size: 30px;
+    }
+
+    .author-polaroid,
+    .author-polaroid_small,
+    .author-photo-large {
+        width: min(86vw, 260px);
+        padding: 14px 14px 38px;
+    }
+
+    .author-polaroid figcaption {
+        margin-top: 10px;
+        font-size: 11px;
+    }
+
+    .author-note,
+    .author-quote,
+    .author-book {
+        padding: 22px 18px;
+    }
+}
+
+/* Author explicit responsive 1024 600 */
+@media (max-width: 1024px) {
+    .start__title {
+        font-size: 60px;
+    }
+
+    .start__image img {
+        max-width: 62vw;
+    }
+
+    .author-story__inner {
+        padding-inline: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .start {
+        padding: 38px 18px 0;
+    }
+
+    .start__title {
+        font-size: 44px;
+    }
+
+    .start__subtitle {
+        font-size: 17px;
+    }
+
+    .woman,
+    .kids {
+        padding-inline: 18px;
+    }
+
+    .author-story__inner,
+    .author-story__inner_two,
+    .author-story__inner_methodist,
+    .author-story__inner_patient,
+    .author-story__inner_volunteer,
+    .author-story__inner_wife {
+        padding: 48px 18px;
+    }
+
+    .author-story__text span,
+    .author-quote strong {
+        font-size: 34px;
+    }
 }

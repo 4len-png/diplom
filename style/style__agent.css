@@ -1,0 +1,29 @@
+.ai-block a{
+    color: black !important;
+}
+.exampleText{
+    margin-left: 30px;
+}
+.selectText li{
+    cursor: pointer;
+}
+/* Agent typography */
+.head-name p,
+.head-name ul {
+    font-family: "Inter", sans-serif;
+    color: #2a1f4a;
+}
+
+.head-name p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.head-name ul {
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.head-name li + li {
+    margin-top: 8px;
+}
