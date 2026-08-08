@@ -1,0 +1,5 @@
+# ignore sftp
+.vscode/
+
+# ignore deepseek api
+ajax/
