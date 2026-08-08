@@ -186,6 +186,146 @@ p {
     align-items: center;
 }
 
+.video__brick:hover,
+.video__brick:focus-visible {
+    background-color: #86c8ff;
+}
+
+/* Class video pages */
+.class-video,
+.class-video *,
+.class-video *::before,
+.class-video *::after {
+    box-sizing: border-box;
+}
+
+.class-video {
+    padding: 50px 85px 70px;
+    color: #231f20;
+}
+
+.class-video__hero {
+    max-width: 1180px;
+    margin: 0 auto 42px;
+}
+
+.class-video__back {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    margin-bottom: 24px;
+    padding: 0 18px;
+    border: 2px solid #7C9EF5;
+    border-radius: 10px;
+    color: #7C9EF5;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.class-video__back:hover,
+.class-video__back:focus-visible {
+    background-color: #7C9EF5;
+    color: #fff;
+}
+
+.class-video__head {
+    background-color: #ECF4FF;
+    border-radius: 20px;
+    padding: 34px 47px 40px;
+}
+
+.class-video__label {
+    margin: 0 0 8px;
+    color: #7C9EF5;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.class-video__title {
+    margin: 0;
+    color: #86C8FF;
+    font-family: "Stengazeta", sans-serif;
+    font-size: 80px;
+    line-height: 1;
+}
+
+.class-video__subtitle {
+    max-width: 720px;
+    margin: 14px 0 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.class-video__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.class-video__lesson {
+    background-color: #ECF4FF;
+    border-radius: 10px;
+    padding: 26px;
+}
+
+.class-video__lesson-head {
+    margin-bottom: 18px;
+}
+
+.class-video__lesson-title {
+    margin: 0;
+    color: #7C9EF5;
+    font-family: "Stengazeta", sans-serif;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.class-video__lesson-note {
+    margin: 8px 0 0;
+    color: #3b3650;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.class-video__player {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 3px solid #7C9EF5;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.class-video__player iframe,
+.class-video__player video,
+.class-video__player embed,
+.class-video__player object {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.class-video__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    color: #7C9EF5;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #fff;
+}
+
 /* ---------------------------------------------------------- */
 
 .footer {
@@ -473,6 +613,19 @@ p {
     .video__bricks {
         flex-wrap: wrap;
     }
+
+    .class-video {
+        padding: 42px 36px 58px;
+    }
+
+    .class-video__content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .class-video__title {
+        font-size: 64px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -511,5 +664,153 @@ p {
 
     .video {
         padding: 30px 18px;
+    }
+
+    .class-video {
+        padding: 30px 16px 42px;
+    }
+
+    .class-video__hero {
+        margin-bottom: 24px;
+    }
+
+    .class-video__back {
+        min-height: 38px;
+        margin-bottom: 18px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+
+    .class-video__head {
+        padding: 24px 18px 26px;
+        border-radius: 14px;
+    }
+
+    .class-video__label {
+        font-size: 14px;
+    }
+
+    .class-video__title {
+        font-size: 44px;
+    }
+
+    .class-video__subtitle {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .class-video__lesson {
+        padding: 18px 16px;
+    }
+
+    .class-video__lesson-title {
+        font-size: 30px;
+    }
+
+    .class-video__lesson-note,
+    .class-video__placeholder {
+        font-size: 14px;
+    }
+
+    .class-video__player {
+        border-width: 2px;
+        border-radius: 10px;
+    }
+}
+
+/* Final compact mobile layout */
+@media (max-width: 600px) {
+    .description {
+        min-height: 0;
+        gap: 24px;
+        padding: 32px 16px 38px;
+    }
+
+    .description__header {
+        gap: 8px;
+    }
+
+    .description__title {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .description__subtitle {
+        max-width: 320px;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .description__content {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .description__learns,
+    .description__result {
+        max-width: 320px;
+    }
+
+    .description__text-bold {
+        margin-bottom: 12px;
+        font-size: 13px;
+    }
+
+    .description__comments-left,
+    .description__comments-right {
+        gap: 8px;
+    }
+
+    .description__comment-left,
+    .description__comment-right {
+        max-width: 260px;
+        padding: 9px 12px;
+        border-radius: 14px;
+    }
+
+    .description__comment-left p,
+    .description__comment-right p,
+    .description__comments-left p {
+        font-size: 11px;
+        line-height: 1.25;
+    }
+
+    .description__video {
+        height: auto;
+    }
+
+    .description__circle {
+        width: 200px;
+        height: 200px;
+        flex-basis: 200px;
+    }
+
+    .video {
+        padding: 30px 16px 40px;
+    }
+
+    .video__title {
+        margin: 0;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .video__bricks {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 155px));
+        justify-content: center;
+        gap: 16px;
+        margin: 24px auto 0;
+    }
+
+    .video__brick {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 14px;
+    }
+
+    .video__text {
+        font-size: 34px;
     }
 }

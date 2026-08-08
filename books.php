@@ -1,13 +1,18 @@
+<?php
+require_once __DIR__ . '/classes/ContentRepository.php';
+
+$books = ContentRepository::books();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Методическая копилка</title>
     <link rel="stylesheet" href="style/normalize.css?v=20260519">
-    <link rel="stylesheet" href="style/header.css?v=20260519">
-    <link rel="stylesheet" href="style/style__books.css?v=20260519">
-    <link rel="stylesheet" href="style/footer.css?v=20260519">
+    <link rel="stylesheet" href="style/style__books.css?v=20260520">
+    <link rel="stylesheet" href="style/header.css?v=20260617-header">
+    <link rel="stylesheet" href="style/footer.css?v=20260617-footer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -32,7 +37,7 @@
                     <div class="library__title">
                         <h1 class="library__name">Библиотека для детей</h1>
                         <p class="library__subtitle">
-                            Яркие иллюстрации, высокое качество печати и бумаги позволят скрасить процесс обучения. Сказка «О светлячке, его маленьком фонарике и большой душе» и другие произведения Наталии Фершуковой расскажут ребенку о добром и важном
+                            Яркие иллюстрации, высокое качество печати и бумаги позволяют скрасить процесс обучения. Сказка «О светлячке, его маленьком фонарике и большой душе» и другие произведения Наталии Фершуковой расскажут ребёнку о добром и важном.
                         </p>
                     </div>
                     <div class="library__content">
@@ -46,7 +51,7 @@
                             </button>
                             <button class="library__btn">
                                 <span class="btn__line"></span>
-                                <a href="#" class="btn__text">Маледшего школьного</a>
+                                <a href="#" class="btn__text">Младшего школьного</a>
                                 <span class="btn__line"></span>
                             </button>
                         </div>
@@ -61,21 +66,13 @@
                             <h1 class="first__title-big">моя первая книга</h1>
                             <p class="first__text">Книга, которая знакомит детей с красотой природы через поэзию и анимацию</p>
                         </div>
-
                         <div class="first__bg"></div>
                         <div class="first__bottom">
-                            
                             <h1 class="first__title-small">книга помогает детям</h1>
-                            <div class="first__block">    
-                                <div class="first__brick">
-                                    <p class="first__text">Узнать о смене сезонов</p>
-                                </div>
-                                <div class="first__brick">
-                                    <p class="first__text">Полюбить природу</p>
-                                </div>
-                                <div class="first__brick">
-                                    <p class="first__text">Развить воображение</p>
-                                </div>
+                            <div class="first__block">
+                                <div class="first__brick"><p class="first__text">Узнать о смене сезонов</p></div>
+                                <div class="first__brick"><p class="first__text">Полюбить природу</p></div>
+                                <div class="first__brick"><p class="first__text">Развить воображение</p></div>
                             </div>
                         </div>
                     </div>
@@ -85,73 +82,29 @@
                 </div>
             </section>
             <section class="books">
-                
                 <div class="books_bg"></div>
-
                 <div class="books_container">
                     <h1 class="books_title">Книги</h1>
-
                     <div class="books-slider">
-
                         <button class="books-slider__btn books-slider__btn_prev" type="button" aria-label="Предыдущие книги"></button>
-
                         <div class="books-slider__window">
                             <div class="books-slider__track">
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/firefly.svg" alt="" class="slider_item-img">
-                                        <video src="videos/firefly.MP4" class="slider_item-video" muted loop playsinline></video>
+                                <?php foreach ($books as $book): ?>
+                                    <div class="slider_item">
+                                        <div class="slider_item-media" data-hover-video>
+                                            <img src="<?= htmlspecialchars($book['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="" class="slider_item-img">
+                                            <?php if (!empty($book['video_path'])): ?>
+                                                <video src="<?= htmlspecialchars($book['video_path'], ENT_QUOTES, 'UTF-8') ?>" class="slider_item-video" muted loop playsinline></video>
+                                            <?php endif; ?>
+                                        </div>
+                                        <p class="slider_item-title"><?= htmlspecialchars($book['title'], ENT_QUOTES, 'UTF-8') ?></p>
+                                        <a href="<?= htmlspecialchars($book['detail_path'], ENT_QUOTES, 'UTF-8') ?>" class="slider_item-btn">О книге</a>
                                     </div>
-                                    <p class="slider_item-title">Сказка о светлячке</p>
-                                    <a href="books/book_firefly.php" class="slider_item-btn">О книге</a>
-                                </div>
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/bush.svg" alt="" class="slider_item-img">
-                                        <video src="videos/bush.MP4" class="slider_item-video" muted loop playsinline></video>
-                                    </div>
-                                    <p class="slider_item-title">Розовый куст и аморфа</p>
-                                    <a href="books/book_bush.html" class="slider_item-btn">О книге</a>
-                                </div>
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/snail.svg" alt="" class="slider_item-img">
-                                        <video src="videos/snail.MP4" class="slider_item-video" muted loop playsinline></video>
-                                    </div>
-                                    <p class="slider_item-title">Улитка</p>
-                                    <a href="books/book_snail.php" class="slider_item-btn">О книге</a>
-                                </div>
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/listik.svg" alt="" class="slider_item-img">
-                                        <video src="videos/listik.MP4" class="slider_item-video" muted loop playsinline></video>
-                                    </div>
-                                    <p class="slider_item-title">Путешествия листика</p>
-                                    <a href="books/book_listik.php" class="slider_item-btn">О книге</a>
-                                </div>
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/geometry.svg" alt="" class="slider_item-img">
-                                        <video src="videos/geometry.MP4" class="slider_item-video" muted loop playsinline></video>
-                                    </div>
-                                    <p class="slider_item-title">Геометрия жизни</p>
-                                    <a href="books/book_geometry.php" class="slider_item-btn">О книге</a>
-                                </div>
-                                <div class="slider_item">
-                                    <div class="slider_item-media" data-hover-video>
-                                        <img src="images/books/moment.svg" alt="" class="slider_item-img">
-                                        <video src="videos/moment.MP4" class="slider_item-video" muted loop playsinline></video>
-                                    </div>
-                                    <p class="slider_item-title">Лови момент</p>
-                                    <a href="books/book_moment.php" class="slider_item-btn">О книге</a>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
-
                         <button class="books-slider__btn books-slider__btn_next" type="button" aria-label="Следующие книги"></button>
-
                     </div>
-                    
                 </div>
             </section>
         </main>

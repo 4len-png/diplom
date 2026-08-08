@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Методическая копилка</title>
     <link rel="stylesheet" href="style/normalize.css?v=20260519">
-    <link rel="stylesheet" href="style/header.css?v=20260519">
-    <link rel="stylesheet" href="style/style__videoguides.css?v=20260519">
-    <link rel="stylesheet" href="style/footer.css?v=20260519">
+    <link rel="stylesheet" href="style/style__videoguides.css?v=20260615-mobile">
+    <link rel="stylesheet" href="style/header.css?v=20260617-header">
+    <link rel="stylesheet" href="style/footer.css?v=20260617-footer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -66,18 +66,18 @@
             <div class="video">
                 <h1 class="video__title">Видеолекции</h1>
                 <div class="video__bricks">
-                    <a href="https://rutube.ru/plst/1629010/" class="video__brick" target="_blank">
+                    <a href="videoguides-4.php" class="video__brick">
                         <p class="video__text">4 класс</p>
                     </a>
-                    <a href="#" class="video__brick">
+                    <a href="videoguides-5.php" class="video__brick">
                         <p class="video__text">5 класс</p>
                     </a>
-                    <div class="video__brick">
+                    <a href="videoguides-6.php" class="video__brick">
                         <p class="video__text">6 класс</p>
-                    </div>
-                    <div class="video__brick">
+                    </a>
+                    <!-- <div class="video__brick">
                         <p class="video__text">7 класс</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </main>

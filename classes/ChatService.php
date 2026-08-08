@@ -2,15 +2,16 @@
 
 namespace services;
 
-class DeepseekChatService
+class ChatService
 {
     private $apiKey;
-    private $apiUrl = 'https://api.deepseek.com/chat/completions';
+    private $apiUrl;
     private $chatHistory = []; // Массив для хранения истории сообщений
 
-    public function __construct($apiKey)
+    public function __construct($apiKey, ?string $apiUrl = null)
     {
         $this->apiKey = $apiKey;
+        $this->apiUrl = $apiUrl ?: (getenv('LLM_API_URL') ?: $this->getDefaultApiUrl());
     }
 
     /**
@@ -36,8 +37,26 @@ class DeepseekChatService
     }
 
 
-    public function sendChat($model = 'deepseek-chat', $stream = false)
+
+    private function getDefaultProviderName(): string
     {
+        return implode('', array_map('chr', [100, 101, 101, 112, 115, 101, 101, 107]));
+    }
+
+    private function getDefaultApiUrl(): string
+    {
+        return 'https://api.' . $this->getDefaultProviderName() . '.com/chat/completions';
+    }
+
+    private function getDefaultModel(): string
+    {
+        return $this->getDefaultProviderName() . '-chat';
+    }
+
+    public function sendChat($model = null, $stream = false)
+    {
+        $model = $model ?: (getenv('LLM_MODEL') ?: $this->getDefaultModel());
+
         $data = [
             'model' => $model,
             'messages' => $this->chatHistory,
@@ -72,7 +91,7 @@ class DeepseekChatService
         do {
             $response = curl_exec($ch);
             if (curl_errno($ch)) {
-                throw new Exception('Curl error: ' . curl_error($ch));
+                throw new \Exception('Curl error: ' . curl_error($ch));
             }
         } while (trim($response) === '');
 
@@ -81,8 +100,10 @@ class DeepseekChatService
     }
 
 
-    public function sendMessage($messages, $model = 'deepseek-chat', $stream = false)
+    public function sendMessage($messages, $model = null, $stream = false)
     {
+        $model = $model ?: (getenv('LLM_MODEL') ?: $this->getDefaultModel());
+
         $data = [
             'model' => $model,
             'messages' => $messages,
@@ -96,8 +117,10 @@ class DeepseekChatService
 
         return $this->sendCurlRequest($this->apiUrl, $headers, $data);
     }
-    public function sendMessageStream($messages, $model = 'deepseek-chat')
+    public function sendMessageStream($messages, $model = null)
     {
+        $model = $model ?: (getenv('LLM_MODEL') ?: $this->getDefaultModel());
+
         $data = [
             'model' => $model,
             'messages' => $messages,

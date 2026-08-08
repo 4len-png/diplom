@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/classes/ContentRepository.php';
+
+$materialsByClass = ContentRepository::materialsGroupedByClass();
+$subjects = ContentRepository::subjects();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Методическая копилка</title>
     <link rel="stylesheet" href="style/normalize.css?v=20260519">
-    <link rel="stylesheet" href="style/header.css?v=20260519">
-    <link rel="stylesheet" href="style/style__guides.css?v=20260522-4">
-    <link rel="stylesheet" href="style/footer.css?v=20260519">
+    <link rel="stylesheet" href="style/style__guides.css?v=20260615-mobile-2">
+    <link rel="stylesheet" href="style/header.css?v=20260617-header">
+    <link rel="stylesheet" href="style/footer.css?v=20260617-footer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -27,23 +33,24 @@
             </div>
             <div class="guides-layout">
                 <div class="guides__edu">
-                    <div class="guides__class" data-class="1">
-                        <div class="guides__big">
-                            <h1 class="guides__title">1 Класс</h1>
-                            <a href="files/Книига Сканирование.pdf" class="guides__text" data-class="1" data-subject="reading" target="_blank">1. Моя первая книга</a><br>
-                            <a href="files/Эпоха рисования форм.pdf" class="guides__text" data-class="1" data-subject="drawing" target="_blank">2. Эпоха рисования форм</a><br>
-                            <a href="files/Математика 1 класс тренировочные задания с нумерацией.pdf" class="guides__text" data-class="1" data-subject="math" target="_blank">3. Математика 1 класс. Тренировочные задания</a><br>
-                            <a href="files/Обучение грамоте.pdf" class="guides__text" data-class="1" data-subject="literacy" target="_blank">4. В помощь классному учителю 1 класса. Обучение грамоте</a><br>
+                    <?php foreach ($materialsByClass as $classLevel => $items): ?>
+                        <div class="guides__class" data-class="<?= htmlspecialchars($classLevel, ENT_QUOTES, 'UTF-8') ?>">
+                            <div class="guides__big">
+                                <h1 class="guides__title"><?= htmlspecialchars($classLevel, ENT_QUOTES, 'UTF-8') ?> класс</h1>
+                                <?php foreach ($items as $index => $item): ?>
+                                    <a
+                                        href="<?= htmlspecialchars($item['file_path'], ENT_QUOTES, 'UTF-8') ?>"
+                                        class="guides__text"
+                                        data-class="<?= htmlspecialchars((string) $item['class_level'], ENT_QUOTES, 'UTF-8') ?>"
+                                        data-subject="<?= htmlspecialchars($item['subject'], ENT_QUOTES, 'UTF-8') ?>"
+                                        download
+                                    ><?= $index + 1 ?>. <?= htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8') ?></a><br>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-                    </div>
-                <div class="guides__class" data-class="7">
-                    <div class="guides__big">
-                        <h1 class="guides__title">7 Класс</h1>
-                        <a href="files/Геометрия в символах.pdf" class="guides__text" data-class="7" data-subject="geometry" download>1. Геометрия в символах</a>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
-        
+
                 <aside class="head-filters">
                     <p class="head-filters__title">Фильтры</p>
                     <div class="head-filters__buttons">
@@ -55,24 +62,22 @@
                             <span class="head-filters__label">Класс</span>
                             <select class="head-filters__select" data-filter-select="class">
                                 <option value="all">Все классы</option>
-                                <option value="1">1 класс</option>
-                                <option value="7">7 класс</option>
+                                <?php foreach (array_keys($materialsByClass) as $classLevel): ?>
+                                    <option value="<?= htmlspecialchars($classLevel, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($classLevel, ENT_QUOTES, 'UTF-8') ?> класс</option>
+                                <?php endforeach; ?>
                             </select>
                         </label>
                         <label class="head-filters__control" data-filter-control="subject" hidden>
                             <span class="head-filters__label">Предмет</span>
                             <select class="head-filters__select" data-filter-select="subject">
                                 <option value="all">Все предметы</option>
-                                <option value="reading">Чтение</option>
-                                <option value="drawing">Рисование</option>
-                                <option value="math">Математика</option>
-                                <option value="literacy">Грамота</option>
-                                <option value="geometry">Геометрия</option>
+                                <?php foreach ($subjects as $code => $label): ?>
+                                    <option value="<?= htmlspecialchars($code, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </label>
                     </div>
                 </aside>
-                
             </div>
         </main>
         <?php require 'components/footer.php'?>

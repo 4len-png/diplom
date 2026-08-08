@@ -317,6 +317,7 @@ img {
 
 .author-polaroid_tilt-right {
     transform: rotate(4deg);
+    object-position: 20% 20%;
 }
 
 .author-polaroid_blue {
@@ -329,7 +330,7 @@ img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 20% 50%;
     border-radius: 5px;
 }
 
